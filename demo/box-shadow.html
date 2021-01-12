@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Novice guide</title>
+    <meta description="" />
+    <style>
+        .skill {
+            word-break: break-all;
+        }
+        .skill span {
+            padding: 0 10px;
+            background: burlywood;
+            text-align: center;
+        }
+    </style>
+    <link rel="stylesheet" href="../index.css">
+</head>
+
+<body>
+    <h2>lala</h2>
+    <div class="skill guide-mark-relative">
+        <span id="love">JavaScript</span>
+        <span>Node.js</span>
+        <span>Webpack</span>
+        <span>React</span>
+        <span>Vue</span>
+        <span>Nginx</span>
+        <span>...</span>
+    </div>
+    <p></p>
+    <p></p>
+    <p></p>
+    <p></p>
+    <div class="skill2 guide-mark-relative">
+        <span id="love">JavaScript</span>
+        <span>Node.js</span>
+        <span>Webpack</span>
+        <span>React</span>
+        <span>Vue</span>
+        <span>Nginx</span>
+        <span>...</span>
+    </div>
+    <!-- <div class="guide-mask"></div> -->
+    <!-- <div class="guide-helper-layer" style="width: 472px; height:58px; top:55px;left: 36px;">
+        <div class='tooltip-box'>
+            <div class="tooltip-title">hello</div>
+            <div class="tooltip-content">lalaa231</div>
+            <div class="tooltip-bottom">
+                <button class="tooltip-btn">prev</button>
+                <button class="tooltip-btn">next</button>
+                <button class="tooltip-btn">done</button>
+            </div>
+        </div>
+    </div> -->
+    <script type="module">
+        import GolryGuide from '../dist/guide.js'
+        const guide = new GolryGuide([
+            {
+              element: '.skill',
+              popover: {
+                title: 'Title on Popover',
+                description: 'Body of the popover',
+                position: 'bottom'
+              }
+            },
+            {
+              element: '.skill2',
+              popover: {
+                title: 'Title on Popover',
+                description: 'Body of the popover',
+                position: 'bottom'
+              },
+            }
+          ], {
+            nextText: '下一步',
+            prevText: '上一步',
+            doneText: '我知道了',
+          })
+          guide.start()
+        // const guideTarget = document.querySelector('.skill')
+        // const tooltip = document.querySelector('.tooltip-box')
+        // var rect = guideTarget.getBoundingClientRect()
+        // const helperLayer = document.querySelector('.guide-helper-layer')
+        // helperLayer.style.left = rect.left - 3 + 'px'
+        // helperLayer.style.top = rect.top - 3 + 'px'
+        // helperLayer.style.width = rect.width + 3 * 2 + 'px'
+        // helperLayer.style.height = rect.height + 3 * 2 + 'px'
+        // tooltip.style.top = rect.height + 3 * 2 + 10 + 5 + 'px'
+
+    </script>
+</body>
+
+</html>

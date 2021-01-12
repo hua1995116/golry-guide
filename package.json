@@ -1,0 +1,16 @@
+{
+  "name": "golry-guide",
+  "version": "1.0.2",
+  "description": "",
+  "main": "dist/guide.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "pub": "tsc && npm publish"
+  },
+  "keywords": [],
+  "author": "hua1995116 <qiufneghyf@gmail.com> (https://github.com/hua1995116)",
+  "license": "MIT",
+  "devDependencies": {
+    "typescript": "^4.0.5"
+  }
+}
